@@ -49,8 +49,8 @@ export default function Winner() {
       </motion.div>
 
       {/* Grid Container */}
-      <div style={{ position: 'relative', maxWidth: '1100px', height: '950px', overflow: 'hidden', margin: '0 auto', zIndex: 1, padding: '0 24px' }}>
-        <div style={{
+      <div className="winner-grid-container" style={{ position: 'relative', maxWidth: '1100px', height: '950px', overflow: 'hidden', margin: '0 auto', zIndex: 1, padding: '0 24px' }}>
+        <div className="winner-grid" style={{
           display: 'flex',
           width: '100%',
           alignItems: 'flex-start',
@@ -107,6 +107,20 @@ export default function Winner() {
           </button>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .winner-grid {
+            flex-direction: column !important;
+            align-items: center !important;
+          }
+          .winner-grid > div {
+            width: 100% !important;
+          }
+          .winner-grid-container {
+            height: 1200px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

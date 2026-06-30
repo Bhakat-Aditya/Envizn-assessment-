@@ -27,7 +27,7 @@ export default function SalesKing() {
           transition={{ duration: 0.7 }}
           style={{ textAlign: 'center', marginBottom: '80px' }}
         >
-          <h2 style={{
+          <h2 className="salesking-heading" style={{
             fontFamily: 'var(--font-heading)',
             fontSize: '56px',
             fontWeight: 800,
@@ -52,7 +52,7 @@ export default function SalesKing() {
         </motion.div>
 
         {/* Two Columns */}
-        <div style={{ display: 'flex', gap: '80px', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div className="salesking-cols" style={{ display: 'flex', gap: '80px', alignItems: 'center', flexWrap: 'wrap' }}>
 
           {/* Left Column */}
           <motion.div
@@ -134,6 +134,16 @@ export default function SalesKing() {
 
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .salesking-heading {
+            fontSize: 40px !important;
+          }
+          .salesking-cols {
+            gap: 40px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

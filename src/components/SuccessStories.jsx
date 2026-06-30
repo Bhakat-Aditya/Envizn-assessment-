@@ -58,7 +58,7 @@ export default function SuccessStories() {
             padding: '0 24px',
           }}
         >
-          <h2 style={{
+          <h2 className="success-heading" style={{
             fontFamily: 'var(--font-raleway)',
             fontWeight: 700,
             fontSize: '48px',
@@ -68,7 +68,7 @@ export default function SuccessStories() {
             marginBottom: '16px',
           }}>
             Success Stories 
-            <span style={{ color: '#ffffff' }}> that <br /> Speak Volumes</span>
+            <span style={{ color: '#ffffff' }}> that <br className="hidden md:block" /> Speak Volumes</span>
           </h2>
 
           <p style={{
@@ -129,6 +129,7 @@ export default function SuccessStories() {
                     if (pos === 1) handleNext();
                     if (pos === -1) handlePrev();
                   }}
+                  className="success-card"
                   style={{
                     position: 'absolute',
                     width: '340px',
@@ -174,10 +175,9 @@ export default function SuccessStories() {
         {/* Navigation Arrows */}
         <div style={{
           display: 'flex',
-          justifyContent: 'flex-start',
+          justifyContent: 'center',
           gap: '32px',
           marginTop: '40px',
-          paddingLeft: '10%',
         }}>
           <button className="carousel-arrow" onClick={handlePrev} aria-label="Previous testimonial">
             <svg viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
@@ -191,6 +191,18 @@ export default function SuccessStories() {
           </button>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .success-heading {
+            font-size: 36px !important;
+            line-height: 42px !important;
+          }
+          .success-card {
+            width: 280px !important;
+            height: 380px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

@@ -82,7 +82,7 @@ export default function FAQ() {
           transition={{ duration: 0.7 }}
           style={{ textAlign: 'center', marginBottom: '56px' }}
         >
-          <h2 style={{
+          <h2 className="faq-heading" style={{
             fontFamily: 'var(--font-raleway)',
             fontWeight: 700,
             fontSize: '48px',
@@ -119,7 +119,7 @@ export default function FAQ() {
                 className="faq-question"
                 onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
               >
-                <span style={{fontSize:"18px"}}>{item.question}</span>
+                <span className="faq-question-text" style={{fontSize:"18px"}}>{item.question}</span>
                 <img 
                   src={logoImg} 
                   alt="Toggle" 
@@ -145,6 +145,17 @@ export default function FAQ() {
           ))}
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .faq-heading {
+            font-size: 36px !important;
+            line-height: 42px !important;
+          }
+          .faq-question-text {
+            font-size: 16px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

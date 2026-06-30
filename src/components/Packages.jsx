@@ -82,7 +82,7 @@ export default function Packages() {
           transition={{ duration: 0.7 }}
           style={{ textAlign: 'center', marginBottom: '80px' }}
         >
-          <h2 style={{
+          <h2 className="packages-heading" style={{
             fontFamily: 'var(--font-heading)',
             fontSize: '48px',
             fontWeight: 800,
@@ -107,6 +107,7 @@ export default function Packages() {
 
         {/* Glassmorphism Box */}
         <motion.div
+          className="packages-glass-box"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -126,7 +127,7 @@ export default function Packages() {
           }}
         >
           {/* Left Column (Pricing) */}
-          <div style={{
+          <div className="packages-price-col" style={{
             flex: '1 1 350px',
             display: 'flex',
             flexDirection: 'column',
@@ -149,7 +150,7 @@ export default function Packages() {
             </p>
 
             <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', marginBottom: '12px' }}>
-              <span style={{
+              <span className="packages-price-text" style={{
                 fontFamily: 'var(--font-heading)',
                 fontSize: '84px',
                 fontWeight: 800,
@@ -192,7 +193,7 @@ export default function Packages() {
               One time, 50% off
             </p>
 
-            <button style={{
+            <button className="packages-btn" style={{
               background: '#FF6229',
               color: '#FFFFFF',
               border: 'none',
@@ -246,6 +247,26 @@ export default function Packages() {
 
         </motion.div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .packages-heading {
+            fontSize: 36px !important;
+          }
+          .packages-glass-box {
+            padding: 24px !important;
+            gap: 32px !important;
+          }
+          .packages-price-col {
+            padding: 24px 16px !important;
+          }
+          .packages-price-text {
+            fontSize: 60px !important;
+          }
+          .packages-btn {
+            width: 80% !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

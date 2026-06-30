@@ -53,11 +53,11 @@ export default function Footer() {
               Sales Mastery
             </h2>
           </div>
-          <h3 className="font-raleway font-bold text-6xl md:text-6xl text-white mb-4">
-            Sign up for 21days <br /> Sales Challenge!
+          <h3 className="font-raleway font-bold text-4xl md:text-6xl text-white mb-4">
+            Sign up for 21days <br className="hidden md:block" /> Sales Challenge!
           </h3>
           <p className="font-raleway text-base md:text-lg text-white/90 max-w-2xl mb-8">
-            Revolutionise Your Approach to Cold Calling and <br /> Unlock Your
+            Revolutionise Your Approach to Cold Calling and <br className="hidden md:block" /> Unlock Your
             Sales Potential
           </p>
           <button className="bg-[#050614] text-white rounded-full !px-6 !py-4 font-raleway font-bold text-base flex items-center gap-2 hover:bg-black/80 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
@@ -69,14 +69,14 @@ export default function Footer() {
         <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-60 rounded-full"></div>
 
         {/* Row 2: Two Columns */}
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12 w-full !mb-18">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 w-full !mb-18">
           {/* Left Column */}
-          <div className="flex flex-col items-start gap-6">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6 w-full md:w-auto">
             <h4 className="font-raleway font-bold text-3xl text-white">
               Sales mastery
             </h4>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center md:items-start">
               {[
                 "Feature",
                 "Testimonial",
@@ -94,7 +94,7 @@ export default function Footer() {
               ))}
             </div>
 
-            <div className="flex gap-6 mt-4 mb-5">
+            <div className="flex gap-6 mt-4 mb-5 justify-center md:justify-start">
               <a
                 href="#"
                 className="font-raleway font-medium text-xs text-white hover:opacity-80 transition-opacity"
@@ -111,22 +111,22 @@ export default function Footer() {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col items-end gap-6 text-right">
+          <div className="flex flex-col items-center md:items-end text-center md:text-right gap-6 w-full md:w-auto">
             {/* Newsletter */}
-            <div className="flex w-full max-w-md items-center gap-2 rounded-full border border-white bg-transparent p-1.5">
+            <div className="flex w-full max-w-md items-center gap-1 sm:gap-2 rounded-full border border-white bg-transparent !p-1 sm:!p-1.5 flex-row">
               <input
                 type="email"
                 placeholder="Lorem@e-mail.com"
-                className="flex-1 bg-transparent !px-5 !py-3 text-white placeholder:text-white/60 outline-none"
+                className="flex-1 bg-transparent !px-3 !py-2 sm:!px-5 sm:!py-3 text-sm sm:text-base text-white placeholder:text-white/60 outline-none w-full min-w-0"
               />
 
-              <button className="rounded-full bg-[#10122a] !px-6 !py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-black">
+              <button className="rounded-full bg-[#10122a] !px-4 !py-2 sm:!px-6 sm:!py-3 text-xs sm:text-sm font-bold text-white transition-all duration-300 hover:bg-black whitespace-nowrap flex-shrink-0">
                 Sign up now
               </button>
             </div>
 
             {/* Logo and Sales Mastery */}
-            <div className="flex items-center gap-3 justify-end mt-2">
+            <div className="flex items-center gap-3 justify-center md:justify-end mt-2">
               <img
                 src={logo}
                 alt="Logo"

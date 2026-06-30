@@ -98,7 +98,7 @@ export default function Curriculum() {
         </motion.div>
 
         {/* Top 2 Modules (Day 1-4, Day 5-8) */}
-        <div style={{ display: 'flex', gap: '25vw', width: '80vw', margin: '0 auto 194px auto', justifyContent: 'center' }}>
+        <div className="curriculum-top-row" style={{ display: 'flex', margin: '0 auto 194px auto', justifyContent: 'center' }}>
           {modules.slice(0, 2).map((mod, index) => {
             const isFirst = index === 0;
             return (
@@ -116,12 +116,15 @@ export default function Curriculum() {
                   gap: '16px',
                   maxWidth: '320px',
                   transition: 'all 0.3s ease',
+                  alignItems: 'center',
+                  textAlign: 'center'
                 }}
               >
                 {/* Connecting SVG Line (Horizontal) */}
                 {isFirst && (
                   <>
                     <svg 
+                      className="curriculum-svg"
                       style={{
                         position: 'absolute',
                         top: '65px', 
@@ -144,6 +147,7 @@ export default function Curriculum() {
 
                     {/* Connecting Vertical Line (From middle of horizontal line to next section) */}
                     <div
+                      className="curriculum-svg"
                       style={{
                         position: 'absolute',
                         top: '60px',
@@ -205,7 +209,7 @@ export default function Curriculum() {
         </div>
 
         {/* Modules List (Day 9-10 onwards) */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', width: '60vw', margin: '0 auto', position: 'relative' }}>
+        <div className="curriculum-bottom-row" style={{ display: 'flex', flexDirection: 'column', gap: '30px', position: 'relative' }}>
           
           {/* Rotated background for the lower section */}
           <div style={{
@@ -234,6 +238,7 @@ export default function Curriculum() {
 
           {/* Connecting Curved Line (Left Side Bracket) */}
           <div 
+            className="curriculum-svg"
             style={{
               position: 'absolute',
               top: '155px', // Centers on the first module's left edge
@@ -259,15 +264,16 @@ export default function Curriculum() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="curriculum-card"
                 style={{
                   display: 'flex',
-                  gap: '80px',
                   padding: '24px',
                   background: '#000000',
                   border: 'none',
                   borderRadius: '16px',
                   alignItems: 'flex-start',
                   transition: 'all 0.3s ease',
+                  width: '100%'
                 }}
               >
                 {/* Special Layout (Index >= 2) */}
@@ -307,6 +313,33 @@ export default function Curriculum() {
           })}
         </div>
       </div>
+      <style>{`
+        .curriculum-top-row { gap: 25vw; width: 80vw; }
+        .curriculum-bottom-row { width: 60vw; margin: 0 auto; }
+        .curriculum-card { gap: 80px; }
+        
+        @media (max-width: 1024px) {
+          .curriculum-top-row {
+            flex-direction: column !important;
+            gap: 60px !important;
+            width: 100% !important;
+            align-items: center !important;
+            margin-bottom: 60px !important;
+          }
+          .curriculum-svg {
+            display: none !important;
+          }
+          .curriculum-bottom-row {
+            width: 90vw !important;
+          }
+          .curriculum-card {
+            flex-direction: column !important;
+            gap: 30px !important;
+            align-items: center !important;
+            text-align: center !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }
