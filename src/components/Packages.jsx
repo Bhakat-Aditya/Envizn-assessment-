@@ -68,7 +68,9 @@ export default function Packages() {
         background: 'radial-gradient(circle 1000px at center, rgba(255, 98, 41, 0.41) 0%, rgba(255, 98, 41, 0) 100%)',
         zIndex: 1,
         pointerEvents: 'none',
-        mixBlendMode: 'screen'
+        mixBlendMode: 'screen',
+        maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)'
       }} />
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', position: 'relative', zIndex: 2 }}>
 

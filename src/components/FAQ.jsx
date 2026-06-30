@@ -70,7 +70,9 @@ export default function FAQ() {
         background: 'radial-gradient(circle 1500px at center, rgba(255, 98, 41, 0.28) 0%, rgba(255, 98, 41, 0) 100%)',
         zIndex: 1,
         pointerEvents: 'none',
-        mixBlendMode: 'screen'
+        mixBlendMode: 'screen',
+        maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)'
       }} />
       <div className="container-main" style={{ position: 'relative', zIndex: 2 }}>
         <motion.div

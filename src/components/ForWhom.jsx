@@ -63,8 +63,8 @@ export default function ForWhom() {
         backgroundRepeat: 'no-repeat',
         opacity: 0.75,
         filter: 'blur(1px)',
-        maskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
-        WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
+        maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, transparent 100%)',
         zIndex: 0,
       }} />
 

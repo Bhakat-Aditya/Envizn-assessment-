@@ -12,7 +12,7 @@ export default function SalesKing() {
       style={{
         position: 'relative',
         padding: '120px 0',
-        background: '#000000',
+        background: 'var(--color-dark-base)',
         color: '#FFFFFF',
         overflow: 'hidden'
       }}
